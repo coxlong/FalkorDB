@@ -6,7 +6,7 @@
 	url = https://github.com/Cyan4973/xxHash.git
 [submodule "deps/RediSearch"]
 	path = deps/RediSearch
-	url = https://github.com/FalkorDB/RediSearch.git
+	url = https://github.com/coxlong/RediSearch.git
 [submodule "deps/utf8proc"]
 	path = deps/utf8proc
 	url = https://github.com/JuliaStrings/utf8proc.git
