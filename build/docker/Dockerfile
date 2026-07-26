@@ -83,6 +83,10 @@ ENV BROWSER=1
 
 EXPOSE 6379/tcp
 
+# cppjieba dictionary files (Chinese tokenizer)
+COPY --from=compiler /FalkorDB/deps/RediSearch/deps/cppjieba/dict ${FALKORDB_BIN_PATH}/jieba_dict
+ENV JIEBA_DICT_DIR=${FALKORDB_BIN_PATH}/jieba_dict
+
 ENV FALKORDB_ARGS="MAX_QUEUED_QUERIES 25 TIMEOUT 1000 RESULTSET_SIZE 10000"
 
 ENTRYPOINT ["/var/lib/falkordb/bin/run.sh"]
